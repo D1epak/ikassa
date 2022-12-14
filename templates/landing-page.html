@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- META DATA -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sash – Bootstrap 5  Admin & Dashboard Template">
+    <meta name="author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+          content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/brand/favicon.ico" />
+
+    <!-- TITLE -->
+    <title>Sash – Bootstrap 5 Admin & Dashboard Template</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- STYLE CSS -->
+    <link href="/static/assets/css/style.css" rel="stylesheet" />
+    <link href="/static/assets/css/dark-style.css" rel="stylesheet" />
+
+    <!--- FONT-ICONS CSS -->
+    <link href="/static/assets/css/icons.css" rel="stylesheet" />
+
+    <!-- COLOR SKIN CSS -->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="/static/assets/colors/color1.css" />
+
+</head>
+
+<body class="app ltr landing-page horizontal">
+
+<!-- GLOBAL-LOADER -->
+<div id="global-loader">
+    <img src="/static/assets/images/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
+<!--app-content open-->
+<div class="main-content mt-0">
+    <div class="side-app">
+        <!-- CONTAINER -->
+        <div class="main-content mt-5">
+            <div class="side-app">
+                <!-- CONTAINER -->
+                <div class="main-container">
+                    <div class="container pt-5 px-sm-0">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 mb-5 pb-5 animation-zidex pos-relative">
+                                <div class="col-xl-6 col-lg-6 my-auto">
+                                    <h3 class="text-start fw-bold p-0 m-0">Обменное бюро</h3>
+                                    <img src="/static/20221212_234123.png" class="p-0 m-0" width="90" alt="">
+                                </div>
+                                <a href="https://themeforest.net/item/sash-bootstrap-5-admin-dashboard-template/35183671"
+                                   target="_blank" class="btn ripple btn-min w-lg mb-3 me-2 btn-primary"><i
+                                        class="icon icon-phone me-2"></i> (772) 121111
+                                </a>
+                                <a href="https://themeforest.net/user/spruko/portfolio"
+                                   class="btn ripple btn-min w-lg btn-outline-primary mb-3 me-2" target="_blank"><i
+                                        class="fe fe-smartphone me-2"></i>(555) 1555223
+                                </a>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table text-nowrap text-md-nowrap mb-0">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Покупка</th>
+                                    <th>Продажа</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for row in table %}
+                                {% for inline in row.landingcursevalue_set.all %}
+                                    {% if inline.county == 1 %}
+                                        <tr>
+                                            <td><i class="flag flag-us"></i></td>
+                                            <td></td>
+                                            <td>{{ inline.shop }}</td>
+                                            <td>{{ inline.shop }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if inline.county == 2 %}
+                                        <tr>
+                                            <td><i class="flag flag-eu"></i></td>
+                                            <td></td>
+                                            <td>85.00</td>
+                                            <td>86.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if inline.county == 3 %}
+                                        <tr>
+                                            <td><i class="flag flag-ru"></i></td>
+                                            <td></td>
+                                            <td>85.00</td>
+                                            <td>86.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if inline.county == 4 %}
+                                        <tr>
+                                            <td><i class="flag flag-kz"></i></td>
+                                            <td></td>
+                                            <td>85.00</td>
+                                            <td>86.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if inline.county == 5 %}
+                                        <tr>
+                                            <td><i class="flag flag-cn"></i></td>
+                                            <td></td>
+                                            <td>85.00</td>
+                                            <td>86.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if inline.county == 6 %}
+                                        <tr>
+                                            <td><i class="flag flag-gb"></i></td>
+                                            <td></td>
+                                            <td>85.00</td>
+                                            <td>86.00</td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- ROW-1 OPEN -->
+                    <div class="section pb-0">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold">Актуальные курсы</h4>
+                                <span class="landing-title"></span>
+                                <h6 class="text-center fw-semibold mb-7">Список актуальных курсов валюты банков</h6>
+                            </div>
+                            <div class="row services-statistics landing-statistics">
+                                {% for row in table %}
+                                    <div class="col-xl-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <img class="avatar" src="{{ row.icon.url }}">
+                                                <h3 class="p-3 card-title">{{ row.title }}</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4><i class="fe fe-smartphone"></i>{{ row.phone }}</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table text-nowrap text-md-nowrap mb-0">
+                                                        <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>Покупка</th>
+                                                            <th>Продажа</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {% for inline in row.landingcursevalue_set.all %}
+                                                            {% if inline.county == 1 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-us"></i></td>
+                                                                    <td></td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 2 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-eu"></i></td>
+                                                                    <td></td>
+                                                                    <td>85.00</td>
+                                                                    <td>86.00</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 3 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-ru"></i></td>
+                                                                    <td></td>
+                                                                    <td>85.00</td>
+                                                                    <td>86.00</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 4 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-kz"></i></td>
+                                                                    <td></td>
+                                                                    <td>85.00</td>
+                                                                    <td>86.00</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 5 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-cn"></i></td>
+                                                                    <td></td>
+                                                                    <td>85.00</td>
+                                                                    <td>86.00</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 6 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-gb"></i></td>
+                                                                    <td></td>
+                                                                    <td>85.00</td>
+                                                                    <td>86.00</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-1 CLOSED -->
+
+                    <!-- ROW-2 OPEN -->
+                    <div class="sptb section bg-white">
+                        <div class="container">
+                            <div class="ht-300" id="leaflet1" style="height:300px"></div>
+                        </div>
+                    </div>
+                    <!-- ROW-2 CLOSED -->
+                </div>
+                <!-- CONTAINER CLOSED-->
+            </div>
+        </div>
+        <!-- CONTAINER CLOSED-->
+    </div>
+</div>
+
+
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- JQUERY JS -->
+<script src="/static/assets/js/jquery.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="/static/assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- COUNTERS JS-->
+<script src="/static/assets/plugins/counters/counterup.min.js"></script>
+<script src="/static/assets/plugins/counters/waypoints.min.js"></script>
+<script src="/static/assets/plugins/counters/counters-1.js"></script>
+
+<!-- Perfect SCROLLBAR JS-->
+<script src="/static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+<script src="/static/assets/plugins/company-slider/slider.js"></script>
+
+<!-- Star Rating Js-->
+<script src="/static/assets/plugins/rating/jquery-rate-picker.js"></script>
+<script src="/static/assets/plugins/rating/rating-picker.js"></script>
+
+<!-- Star Rating-1 Js-->
+<script src="/static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+<script src="/static/assets/plugins/ratings-2/star-rating.js"></script>
+<!-- INTERNAL leaflet js -->
+<script src="/static/assets/plugins/leaflet/leaflet.js"></script>
+<script src="/static/assets/js/map-leafleft.js"></script>
+<!-- Sticky js -->
+<script src="/static/assets/js/sticky.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="/static/assets/js/landing.js"></script>
+
+</body>
+
+</html>
