@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from . import models
 
+
 class Landing(TemplateView):
     template_name = 'landing-page.html'
 
