@@ -6,6 +6,7 @@ class LandingCurse(models.Model):
     Лэндинг актуальные курсы монеты
     """
     icon = models.ImageField(verbose_name='Логотип', upload_to='media/', db_index=True)
+    value = models.BooleanField(verbose_name='Наш банк', default=False)
     title = models.CharField(verbose_name='Название банка', db_index=True, max_length=100)
     phone = models.CharField(verbose_name='Номер телефона', db_index=True, max_length=100)
 
