@@ -7,7 +7,7 @@ class Landing(TemplateView):
 
     def get_context_data(self, **kwargs):
         table = models.LandingCurse.objects.all()
-        table_first = models.LandingCurse.objects.first()
+        table_first = models.LandingCurse.objects.filter(value=True)
         context = super().get_context_data(**kwargs)
         context['table'] = table
         context['tablef'] = table_first
