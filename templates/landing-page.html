@@ -72,56 +72,56 @@
                                 </thead>
                                 <tbody>
                                 {% for row in table %}
-                                {% for inline in row.landingcursevalue_set.all %}
-                                    {% if inline.county == 1 %}
-                                        <tr>
-                                            <td><i class="flag flag-us"></i></td>
-                                            <td></td>
-                                            <td>{{ inline.shop }}</td>
-                                            <td>{{ inline.shop }}</td>
-                                        </tr>
-                                    {% endif %}
-                                    {% if inline.county == 2 %}
-                                        <tr>
-                                            <td><i class="flag flag-eu"></i></td>
-                                            <td></td>
-                                            <td>85.00</td>
-                                            <td>86.00</td>
-                                        </tr>
-                                    {% endif %}
-                                    {% if inline.county == 3 %}
-                                        <tr>
-                                            <td><i class="flag flag-ru"></i></td>
-                                            <td></td>
-                                            <td>85.00</td>
-                                            <td>86.00</td>
-                                        </tr>
-                                    {% endif %}
-                                    {% if inline.county == 4 %}
-                                        <tr>
-                                            <td><i class="flag flag-kz"></i></td>
-                                            <td></td>
-                                            <td>85.00</td>
-                                            <td>86.00</td>
-                                        </tr>
-                                    {% endif %}
-                                    {% if inline.county == 5 %}
-                                        <tr>
-                                            <td><i class="flag flag-cn"></i></td>
-                                            <td></td>
-                                            <td>85.00</td>
-                                            <td>86.00</td>
-                                        </tr>
-                                    {% endif %}
-                                    {% if inline.county == 6 %}
-                                        <tr>
-                                            <td><i class="flag flag-gb"></i></td>
-                                            <td></td>
-                                            <td>85.00</td>
-                                            <td>86.00</td>
-                                        </tr>
-                                    {% endif %}
-                                {% endfor %}
+                                    {% for inline in row.landingcursevalue_set.all %}
+                                        {% if inline.county == 1 %}
+                                            <tr>
+                                                <td><i class="flag flag-us"></i></td>
+                                                <td>USD</td>
+                                                <td>{{ inline.shop }}</td>
+                                                <td>{{ inline.shop }}</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if inline.county == 2 %}
+                                            <tr>
+                                                <td><i class="flag flag-eu"></i></td>
+                                                <td>KZT</td>
+                                                <td>85.00</td>
+                                                <td>86.00</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if inline.county == 3 %}
+                                            <tr>
+                                                <td><i class="flag flag-ru"></i></td>
+                                                <td>RUB</td>
+                                                <td>85.00</td>
+                                                <td>86.00</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if inline.county == 4 %}
+                                            <tr>
+                                                <td><i class="flag flag-kz"></i></td>
+                                                <td>KZT</td>
+                                                <td>85.00</td>
+                                                <td>86.00</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if inline.county == 5 %}
+                                            <tr>
+                                                <td><i class="flag flag-cn"></i></td>
+                                                <td>CNY</td>
+                                                <td>85.00</td>
+                                                <td>86.00</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if inline.county == 6 %}
+                                            <tr>
+                                                <td><i class="flag flag-gb"></i></td>
+                                                <td>GBP</td>
+                                                <td>85.00</td>
+                                                <td>86.00</td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endfor %}
                                 </tbody>
                             </table>
@@ -160,7 +160,7 @@
                                                             {% if inline.county == 1 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-us"></i></td>
-                                                                    <td></td>
+                                                                    <td>USD</td>
                                                                     <td>{{ inline.shop }}</td>
                                                                     <td>{{ inline.shop }}</td>
                                                                 </tr>
@@ -168,41 +168,49 @@
                                                             {% if inline.county == 2 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-eu"></i></td>
-                                                                    <td></td>
-                                                                    <td>85.00</td>
-                                                                    <td>86.00</td>
+                                                                    <td>EUR</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
                                                                 </tr>
                                                             {% endif %}
                                                             {% if inline.county == 3 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-ru"></i></td>
-                                                                    <td></td>
-                                                                    <td>85.00</td>
-                                                                    <td>86.00</td>
+                                                                    <td>RUB</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
                                                                 </tr>
                                                             {% endif %}
                                                             {% if inline.county == 4 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-kz"></i></td>
-                                                                    <td></td>
-                                                                    <td>85.00</td>
-                                                                    <td>86.00</td>
+                                                                    <td>KZT</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
                                                                 </tr>
                                                             {% endif %}
                                                             {% if inline.county == 5 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-cn"></i></td>
-                                                                    <td></td>
-                                                                    <td>85.00</td>
-                                                                    <td>86.00</td>
+                                                                    <td>CNY</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
                                                                 </tr>
                                                             {% endif %}
                                                             {% if inline.county == 6 %}
                                                                 <tr>
                                                                     <td><i class="flag flag-gb"></i></td>
-                                                                    <td></td>
-                                                                    <td>85.00</td>
-                                                                    <td>86.00</td>
+                                                                    <td>GBP</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                </tr>
+                                                            {% endif %}
+                                                            {% if inline.county == 7 %}
+                                                                <tr>
+                                                                    <td><i class="flag flag-uz"></i></td>
+                                                                    <td>UZS</td>
+                                                                    <td>{{ inline.shop }}</td>
+                                                                    <td>{{ inline.shop }}</td>
                                                                 </tr>
                                                             {% endif %}
                                                         {% endfor %}
@@ -230,10 +238,23 @@
             </div>
         </div>
         <!-- CONTAINER CLOSED-->
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-md-12 col-sm-12 text-center">
+                        Copyright © <span id="year"></span> Курсы валют. Актуальные курсы валют банков и обменок.
+                        <p class="small text-gray">
+                            Вся предоставляемая сайтом информация носит исключительно справочный характер, мы не можем гарантировать её достоверность.
+                            Заявленные на сайте курсы валют не являются обязательством по совершению сделки. Перед обменной операцией уточняйте курс в банке или обменном пункте по указанным телефонам.
+                            Меняйте деньги только в специализированных учреждениях с лицензией на проведение обменных операций.
+                            Обмен без лицензии — нарушение закона КР!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
-
-
 <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 <!-- JQUERY JS -->

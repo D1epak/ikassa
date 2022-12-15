@@ -28,6 +28,7 @@ class LandingCurseValue(models.Model):
         (4, 'KZT'),
         (5, 'CNY'),
         (6, 'GBP'),
+        (7, 'UZS')
     )
     fk = models.ForeignKey(LandingCurse, verbose_name='Банк', on_delete=models.CASCADE)
     buy = models.IntegerField(verbose_name='Покупка', db_index=True)
