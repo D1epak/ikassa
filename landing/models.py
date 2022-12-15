@@ -31,8 +31,8 @@ class LandingCurseValue(models.Model):
         (7, 'UZS')
     )
     fk = models.ForeignKey(LandingCurse, verbose_name='Банк', on_delete=models.CASCADE)
-    buy = models.IntegerField(verbose_name='Покупка', db_index=True)
-    shop = models.IntegerField(verbose_name='Продажа', db_index=True)
+    buy = models.CharField(verbose_name='Покупка', db_index=True, max_length=100)
+    shop = models.CharField(verbose_name='Продажа', db_index=True, max_length=100)
     county = models.IntegerField(verbose_name='Страна', choices=county_choice, db_index=True)
 
     class Meta:
