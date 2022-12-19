@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #1B1E26;
+    padding: 20px 5%;
+    color: #eee;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* HEADER */
+
+header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header nav ul {
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    gap: 100px;
+}
+
+header nav ul a {
+    transition: all .1s linear;
+}
+
+header nav ul a:hover {
+    color: #A55FEA;
+}
+
+header .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .1s linear;
+    cursor: pointer;
+    padding: 8px 20px;
+    background: #A55FEA;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+header .btn:hover {
+    background: #a77dd2;
+}
+.burger {
+    display: none;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+section h3 {
+    color: #676767;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+section hr {
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #a77dd2;
+    margin-bottom: 20px;
+}
+
+
+.header_buttons {
+    display: flex;
+    gap: 30px;
+}
+
+nav .header_buttons {
+    display: none;
+}
+
+/* HERO */
+
+#hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+#hero > div:first-child {
+    width: 60%;
+}
+
+#hero h1 {
+    font-size: 64px;
+    margin-bottom: 32px;
+}
+
+#hero p {
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#hero a {
+    transition: all .1s linear;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A55FEA;
+    font-size: 24px;
+    box-shadow: 0 4px 20px #4a2a6b;
+}
+
+#hero .hero_img {
+    width: 100%;
+}
+
+
+#hero a:hover {
+    background: #a77dd2;
+}
+
+
+/* COURSES */
+
+table {
+    border-collapse: collapse;
+    margin-top: 60px;
+    margin: 0 auto;
+    width: 640px;
+}
+
+table td {
+    text-align: center;
+    padding: 13px;
+    border-bottom: 1px solid #A55FEA;
+}
+
+table td img {
+    min-width: 30px;
+    max-height: 30px;
+}
+
+/* BANK COURSES */
+
+#courses {
+    position: relative;
+}
+
+.banks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bank {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.bank__header {
+    font-size: 18px;
+    display: flex;
+    padding: 20px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.bank__header img {
+    height: 40px;
+    width: 40px;
+}
+
+.bank__mobile {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bank table {
+    width: 100%;
+}
+
+.bank hr {
+    width: 100%;
+    margin: 0 0;
+}
+
+/* ABOUT */
+
+#about {
+    position: relative;
+    margin-bottom: 180px;
+}
+
+.features {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+.features .feature {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature img {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 15px;
+}
+
+.feature h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.feature p {
+    text-align: center;
+    color: #6C6C6C;
+}
+
+/* INFO */
+
+#info {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    gap: 5%;
+}
+
+#info hr {
+    margin: 0 0 20px;
+}
+
+#info h2 {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 40px !important;
+}
+
+#info h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #eee;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#info > div:first-child {
+    border-radius: 100px;
+    width: 700px;
+    height: 700px;
+    border:10px solid #A55FEA;
+    box-shadow: 0 4px 60px #4a2a6b;
+}
+
+#info .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#info .map {
+    overflow: hidden;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer .logo {
+    margin-bottom: 20px;
+}
+footer .logo img {
+    height: 60px;
+}
+footer p {
+    width: 80%;
+    color: #6F6F6F;
+    margin-bottom: 10px;
+}
+footer span {
+    font-weight: 500;
+    color:#A55FEA
+}
+
+/* BLOBS */
+
+
+#blob_0 {
+    z-index: -1;
+    top: -20%;
+    left: -5.5%;
+    position: absolute;
+}
+
+#blob_1 {
+    z-index: -1;
+    top: 20%;
+    right: -5.5%;
+    position: absolute;
+}
+
+#blob_2 {
+    z-index: -1;
+    top: 0%;
+    left: -5.5%;
+    position: absolute;
+}
+
+#blob_3 {
+    z-index: -1;
+    top: 50%;
+    right: -5.5%;
+    position: absolute;
+}
+
+#blob_4 {
+    display: none;
+    z-index: -1;
+    top: 0%;
+    left: -5.5%;
+    position: absolute;
+}
+
+#blob_5 {
+    display: none;
+    z-index: -1;
+    top: 20%;
+    right: -5.5%;
+    position: absolute;
+}
+
+#blob_6 {
+    z-index: -1;
+    bottom: -20%;
+    right: -5.5%;
+    position: absolute;
+}
+
+#blob_7 {
+    z-index: -1;
+    bottom: -20px;
+    left: -5.5%;
+    position: absolute;
+}
+
+@media screen and (max-width: 1440px) {
+    .header_buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero h1 {
+        font-size: 48px;
+    }
+
+    #hero p {
+        font-size: 24px;
+    }
+    header nav ul {
+        font-size: 18px !important;
+        gap: 50px !important;
+    }
+
+    #blob_0 {
+        display: none;
+    }
+    
+    #blob_3 {
+        display: none;
+    }
+    .map {
+        width: 50% !important;
+        height: auto !important;
+        aspect-ratio: 1;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    #blob_0 {
+        display: none;
+    }
+    
+    #blob_1 {
+        display: none;
+    }
+    
+    #blob_2 {
+        display: none;
+    }
+    
+    #blob_3 {
+        display: none;
+    }
+    
+    #blob_4 {
+        display: none;
+    }
+    
+    #blob_5 {
+        display: none;
+    }
+    
+    #blob_6 {        
+        display: none;
+
+    }
+    
+    #blob_7 {
+        display: none;
+    }
+
+    #hero {
+        padding-top: 120px;
+        flex-direction: column;
+        
+    }
+    #hero > div {
+        width: 100% !important; 
+    }
+    #hero .hero_img {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    header {
+        padding: 20px 5%;
+        margin-top: 0 !important;
+        top: 0;
+        left: 0;
+        height: 100px !important;
+        z-index: 20;
+        background: #1B1E26;
+        width: 90%;
+        position: fixed;
+        height: auto;
+    }
+
+    header.active nav {
+        display: block !important;
+    }
+
+
+    nav {
+        width: 100%;
+        padding: 20px 5% 40px;
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 140px;
+        background: #1B1E26;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav .header_buttons {
+        flex-wrap: wrap;
+        margin-top: 30px;
+        flex-direction: row;
+        display: flex !important;
+    }
+
+    .header_buttons {
+        display: none;
+    }
+
+    #info {
+        margin-top: 0 !important;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    #info h2{
+        text-align: center !important;
+    }
+    
+    #info h3{
+        text-align: center !important;
+    }
+    #info hr{
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    #info .item{
+        justify-content: center;
+    }
+    .map {
+        width: 100% !important;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .map iframe {
+        width: 100%;
+    }
+
+    #about {
+        margin-bottom: 60px !important;
+    }
+
+    .bank {
+        width: 48%;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+}
+
+
+@media screen and (max-width: 720px) {
+    .bank {
+        width: 100% !important;
+    }
+
+    #courses table {
+        width: 100% !important;
+    }
+}

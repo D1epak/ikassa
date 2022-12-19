@@ -4,7 +4,7 @@ from . import models
 
 
 class Landing(TemplateView):
-    template_name = 'landing-page.html'
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         table = models.LandingCurse.objects.all()
