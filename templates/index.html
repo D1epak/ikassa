@@ -1,293 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/assets/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/assets/style.css" rel="stylesheet" />
     <title>IKASSA - Обменное бюро</title>
-</head>
-<body>
-<header>
-    <div class="logo">
-        <img src="/static/assets/images/logo.png">
-    </div>
-    <iconify-icon icon="pajamas:hamburger" class="burger" width="50"></iconify-icon>
-    <nav>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/static/assets/images/logo.png" />
+      </div>
+      <iconify-icon
+        icon="pajamas:hamburger"
+        class="burger"
+        width="50"
+      ></iconify-icon>
+      <nav>
         <ul>
-            <li><a href="#hero">Главная</a></li>
-            <li><a href="#courses">Курсы</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#info">Контакты</a></li>
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#courses">Курсы</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#info">Контакты</a></li>
         </ul>
         <div class="header_buttons">
-            <a class="btn" href="tel://0990099080"><img src="/static/assets/images/header/callcalling.svg">0990099080</a>
-            <a class="btn" href="tel://0550555208"><img src="/static/assets/images/header/mobile.svg">0550555208</a>
+          <a class="btn" href="tel://0990099080"
+            ><img
+              src="/static/assets/images/header/callcalling.svg"
+            />0990099080</a
+          >
+          <a class="btn" href="tel://0550555208"
+            ><img src="/static/assets/images/header/mobile.svg" />0550555208</a
+          >
         </div>
-    </nav>
-    <div class="header_buttons">
-        <a class="btn" href="tel://0990099080"><img src="/static/assets/images/header/callcalling.svg">0990099080</a>
-        <a class="btn" href="tel://0550555208"><img src="/static/assets/images/header/mobile.svg">0550555208</a>
-    </div>
-</header>
-<main>
-    <section id="hero">
-
+      </nav>
+      <div class="header_buttons">
+        <a class="btn" href="tel://0990099080"
+          ><img
+            src="/static/assets/images/header/callcalling.svg"
+          />0990099080</a
+        >
+        <a class="btn" href="tel://0550555208"
+          ><img src="/static/assets/images/header/mobile.svg" />0550555208</a
+        >
+      </div>
+    </header>
+    <main>
+      <section id="hero">
         <div>
-            <h1>Обменное бюро IKASSA</h1>
-            <p>Следим за актуальными курсами валют предоставляя нашим клиентам актуальные данные для отслеживания и торговлю валютой.</p>
-            <a href="#courses">Посмотреть курсы</a>
+          <h1>Обменное бюро IKASSA</h1>
+          <p>
+            Следим за актуальными курсами валют предоставляя нашим клиентам
+            актуальные данные для отслеживания и торговлю валютой.
+          </p>
+          <a href="#courses">Посмотреть курсы</a>
         </div>
         <div>
-            <img class="hero_img" src="/static/assets/images/hero.png">
+          <img class="hero_img" src="/static/assets/images/hero.png" />
         </div>
-        <img id="blob_0" src="/static/assets/images/blobs/Vector-7.svg">
-        <img id="blob_1" src="/static/assets/images/blobs/Vector-6.svg">
-    </section>
-    <section id="courses">
+        <img id="blob_0" src="/static/assets/images/blobs/Vector-7.svg" />
+        <img id="blob_1" src="/static/assets/images/blobs/Vector-6.svg" />
+      </section>
+      <section id="courses">
         <h2>Курсы</h2>
-        <hr>
+        <hr />
         <h3>Курсы нашего бюро</h3>
+        <div class="bank__mobile">
+          <img src="/static/assets/images/mobile.svg" />
+          <p>89999999999</p>
+        </div>
         <table>
-            <thead>
+          <thead>
             <tr>
-                <td></td>
-                <td></td>
-                <td>ПОКУПКА</td>
-                <td>ПРОДАЖА</td>
+              <td></td>
+              <td></td>
+              <td>ПОКУПКА</td>
+              <td>ПРОДАЖА</td>
             </tr>
-            </thead>
-            <tbody>
-            {% for inline in tablef.landingcursevalue_set.all %}
-                {% if inline.county == 1 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/us.svg"></td>
-                        <td>USD</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 2 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/eu.svg"></td>
-                        <td>EUR</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 3 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/ru.svg"></td>
-                        <td>RUB</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 4 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/kz.svg"></td>
-                        <td>KZT</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 5 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/uz.svg"></td>
-                        <td>CNY</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 6 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/gb.svg"></td>
-                        <td>GBP</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-                {% if inline.county == 7 %}
-                    <tr>
-                        <td><img src="/static/assets/images/flags/uz.svg"></td>
-                        <td>UZS</td>
-                        <td>{{ inline.buy }}</td>
-                        <td>{{ inline.shop }}</td>
-                    </tr>
-                {% endif %}
-            {% endfor %}
-            </tbody>
+          </thead>
+          <tbody>
+            {%for inline in tablef.landingcursevalue_set.all%} {%if inline.county == 1%}
+            <tr>
+              <td><img src="/static/assets/images/flags/us.svg" /></td>
+              <td>USD</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 2 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/eu.svg" /></td>
+              <td>EUR</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 3 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/ru.svg" /></td>
+              <td>RUB</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 4 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/kz.svg" /></td>
+              <td>KZT</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 5 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/uz.svg" /></td>
+              <td>CNY</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 6 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/gb.svg" /></td>
+              <td>GBP</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% if inline.county == 7 %}
+            <tr>
+              <td><img src="/static/assets/images/flags/uz.svg" /></td>
+              <td>UZS</td>
+              <td>{{ inline.buy }}</td>
+              <td>{{ inline.shop }}</td>
+            </tr>
+            {% endif %} {% endfor %}
+          </tbody>
         </table>
 
-        <img id="blob_2" src="/static/assets/images/blobs/Vector-1.svg">
-        <img id="blob_3" src="/static/assets/images/blobs/Vector-2.svg">
-    </section>
-    <section id="bank_courses">
+        <img id="blob_2" src="/static/assets/images/blobs/Vector-1.svg" />
+        <img id="blob_3" src="/static/assets/images/blobs/Vector-2.svg" />
+      </section>
+      <section id="bank_courses">
         <h2>Курсы банков</h2>
-        <hr>
+        <hr />
         <h3>Актуальные курсы банков</h3>
         <div class="banks">
-            {% for row in table %}
-                {% if row.value == True %}
-                {% else %}
-                    <div class="bank">
-                        <div class="bank__header">
-                            <img src="{{ row.icon.url }}">
-                            <h5>{{ row.title }}</h5>
-                        </div>
-                        <hr>
-                        <div class="bank__mobile">
-                            <img src="/static/assets/images/mobile.svg">
-                            <p>{{ row.phone }}</p>
-                        </div>
-                        <table>
-                            <thead>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>ПОКУПКА</td>
-                                <td>ПРОДАЖА</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for inline in tablef.landingcursevalue_set.all %}
-                                {% if inline.county == 1 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/us.svg"></td>
-                                        <td>USD</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 2 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/eu.svg"></td>
-                                        <td>EUR</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 3 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/ru.svg"></td>
-                                        <td>RUB</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 4 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/kz.svg"></td>
-                                        <td>KZT</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 5 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/uz.svg"></td>
-                                        <td>CNY</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 6 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/gb.svg"></td>
-                                        <td>GBP</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                                {% if inline.county == 7 %}
-                                    <tr>
-                                        <td><img src="/static/assets/images/flags/uz.svg"></td>
-                                        <td>UZS</td>
-                                        <td>{{ inline.buy }}</td>
-                                        <td>{{ inline.shop }}</td>
-                                    </tr>
-                                {% endif %}
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                {% endif %}
-            {% endfor %}
+          {% for row in table %} {% if row.value == True %} {% else %}
+          <div class="bank">
+            <div class="bank__header">
+              <img src="{{ row.icon.url }}" />
+              <h5>{{ row.title }}</h5>
+            </div>
+            <hr />
+            <div class="bank__mobile">
+              <img src="/static/assets/images/mobile.svg" />
+              <p>{{ row.phone }}</p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>ПОКУПКА</td>
+                  <td>ПРОДАЖА</td>
+                </tr>
+              </thead>
+              <tbody>
+                {% for inline in tablef.landingcursevalue_set.all %} {% if inline.county == 1 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/us.svg" /></td>
+                  <td>USD</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 2 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/eu.svg" /></td>
+                  <td>EUR</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 3 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/ru.svg" /></td>
+                  <td>RUB</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 4 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/kz.svg" /></td>
+                  <td>KZT</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 5 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/uz.svg" /></td>
+                  <td>CNY</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 6 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/gb.svg" /></td>
+                  <td>GBP</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% if inline.county == 7 %}
+                <tr>
+                  <td><img src="/static/assets/images/flags/uz.svg" /></td>
+                  <td>UZS</td>
+                  <td>{{ inline.buy }}</td>
+                  <td>{{ inline.shop }}</td>
+                </tr>
+                {% endif %} {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %} {% endfor %}
         </div>
-    </section>
-    <section id="about">
+      </section>
+      <section id="about">
         <h2>О нас</h2>
-        <hr>
+        <hr />
         <h3>Наши преимущества</h3>
         <div class="features">
-            <div class="feature">
-                <img src="/static/assets/images/shield.svg">
-                <h4>Лицензия</h4>
-                <hr>
-                <p>Мы официально лицензированное бюро обмена валюты</p>
-            </div>
-            <div class="feature">
-                <img src="/static/assets/images/flash.svg">
-                <h4>Скорость</h4>
-                <hr>
-                <p>Высокая скорость выставления курсов из-за интеграции передовых API технологий.</p>
-            </div>
-            <div class="feature">
-                <img src="/static/assets/images/notification.svg">
-                <h4>Тех-поддержка</h4>
-                <hr>
-                <p>Возможность обратиться в тех-поддержку и получить консультацию не приезжая в офис</p>
-            </div>
+          <div class="feature">
+            <img src="/static/assets/images/shield.svg" />
+            <h4>Лицензия</h4>
+            <hr />
+            <p>Мы официально лицензированное бюро обмена валюты</p>
+          </div>
+          <div class="feature">
+            <img src="/static/assets/images/flash.svg" />
+            <h4>Скорость</h4>
+            <hr />
+            <p>
+              Высокая скорость выставления курсов из-за интеграции передовых API
+              технологий.
+            </p>
+          </div>
+          <div class="feature">
+            <img src="/static/assets/images/notification.svg" />
+            <h4>Тех-поддержка</h4>
+            <hr />
+            <p>
+              Возможность обратиться в тех-поддержку и получить консультацию не
+              приезжая в офис
+            </p>
+          </div>
         </div>
-        <img id="blob_4" src="/static/assets/images/blobs/Vector-3.svg">
-        <img id="blob_5" src="/static/assets/images/blobs/Vector-4.svg">
-    </section>
-    <section id="info">
+        <img id="blob_4" src="/static/assets/images/blobs/Vector-3.svg" />
+        <img id="blob_5" src="/static/assets/images/blobs/Vector-4.svg" />
+      </section>
+      <section id="info">
         <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb0a5a277d90c99f1f301c848e482346677f0fa074c274a16aad62691b2b2972&amp;source=constructor" width="700" height="700" frameborder="0"></iframe>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb0a5a277d90c99f1f301c848e482346677f0fa074c274a16aad62691b2b2972&amp;source=constructor"
+            width="700"
+            height="700"
+            frameborder="0"
+          ></iframe>
         </div>
         <div>
-            <h2>Информация о нас</h2>
-            <h3>Местоположение</h3>
-            <hr>
-            <div class="item">
-                <img src="/static/assets/images/location.svg">
-                <p>улица Ленина, Джалал-Абад</p>
-            </div>
-            <h3>Социальные сети</h3>
-            <hr>
-            <div class="item">
-                <img src="/static/assets/images/telegram.svg">
-                <p>Telegram: @ikassa_kg</p>
-            </div>
+          <h2>Информация о нас</h2>
+          <h3>Местоположение</h3>
+          <hr />
+          <div class="item">
+            <img src="/static/assets/images/location.svg" />
+            <p>улица Ленина, Джалал-Абад</p>
+          </div>
+          <h3>Социальные сети</h3>
+          <hr />
+          <div class="item">
+            <img src="/static/assets/images/telegram.svg" />
+            <p>Telegram: @ikassa_kg</p>
+          </div>
         </div>
 
-        <img id="blob_6" src="/static/assets/images/blobs/Vector.svg">
-    </section>
-</main>
-<footer>
-    <div class="logo">
-        <img src="/static/assets/images/logo.png">
-    </div>
-    <p>Вся предоставляемая сайтом информация носит исключительно справочный характер, мы не можем гарантировать её достоверность. Заявленные на сайте курсы валют не являются обязательством по совершению сделки. Перед обменной операцией уточняйте курс в банке или обменном пункте по указанным телефонам. Меняйте деньги только в специализированных учреждениях с лицензией на проведение обменных операций. Обмен без лицензии — нарушение закона КР!</p>
-    <p><span><a href="https://t.me/AIlab73">Разработано студией Ailab73</a></span></p>
-    <img id="blob_7" src="/static/assets/images/blobs/Vector-5.svg">
-</footer>
-</body>
-<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-<script>
-    let burger = document.querySelector('.burger')
-    let header = document.querySelector('header')
+        <img id="blob_6" src="/static/assets/images/blobs/Vector.svg" />
+      </section>
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="/static/assets/images/logo.png" />
+      </div>
+      <p>
+        Вся предоставляемая сайтом информация носит исключительно справочный
+        характер, мы не можем гарантировать её достоверность. Заявленные на
+        сайте курсы валют не являются обязательством по совершению сделки. Перед
+        обменной операцией уточняйте курс в банке или обменном пункте по
+        указанным телефонам. Меняйте деньги только в специализированных
+        учреждениях с лицензией на проведение обменных операций. Обмен без
+        лицензии — нарушение закона КР!
+      </p>
+      <p>
+        <span
+          ><a href="https://t.me/AIlab73">Разработано студией Ailab73</a></span
+        >
+      </p>
+      <img id="blob_7" src="/static/assets/images/blobs/Vector-5.svg" />
+    </footer>
+  </body>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <script>
+    let burger = document.querySelector(".burger");
+    let header = document.querySelector("header");
 
-    burger.addEventListener('click', (e) => {
-        header.classList.toggle('active')
-    })
+    burger.addEventListener("click", (e) => {
+      header.classList.toggle("active");
+    });
 
-    header.querySelectorAll('a').forEach(li => {
-        li.addEventListener('click', () => {
-            header.classList.remove('active')
-        })
-    })
-
-</script>
+    header.querySelectorAll("a").forEach((li) => {
+      li.addEventListener("click", () => {
+        header.classList.remove("active");
+      });
+    });
+  </script>
 </html>

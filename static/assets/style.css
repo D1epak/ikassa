@@ -73,7 +73,7 @@ header .btn:hover {
 }
 
 section {
-    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 section h2 {
@@ -180,6 +180,10 @@ table td img {
 
 #courses {
     position: relative;
+}
+
+#courses .bank__mobile {
+    justify-content: center;
 }
 
 .banks {
@@ -476,6 +480,12 @@ footer span {
     .burger {
         display: block;
     }
+
+    
+section {
+    padding-top: 160px !important;
+    margin-top: 60px !important;
+}
 
     header {
         padding: 20px 5%;
