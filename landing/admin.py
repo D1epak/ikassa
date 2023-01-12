@@ -12,3 +12,4 @@ class LandingCurseAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.LandingCurse, LandingCurseAdmin)
+admin.site.register(models.SeoTag)

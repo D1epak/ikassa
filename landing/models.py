@@ -42,3 +42,11 @@ class LandingCurseValue(models.Model):
 
     def __str__(self):
         return 'Курс'
+
+
+class SeoTag(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Имя")
+    content = models.CharField(max_length=100, verbose_name="Содержание")
+
+    def __str__(self):
+        return self.name

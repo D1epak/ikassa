@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% for seotag in seotags %}
+    <meta name="{{ seotag.name }}" content="{{ seotag.content}}" />
+    {% endfor %}
     <link href="/static/assets/style.css" rel="stylesheet" />
     <title>IKASSA - Обменное бюро</title>
   </head>
@@ -141,6 +144,50 @@
         <hr />
         <h3>Актуальные курсы банков</h3>
         <div class="banks">
+<table>
+          <thead>
+            <tr>
+              <td colspan="2"></td>
+              <td colspan="2">USD</td>
+              <td colspan="2">EUR</td>
+              <td colspan="2">RUB</td>
+              <td colspan="2">KZT</td>
+              <td colspan=""></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>ПОКУПКА</td>
+              <td>ПРОДАЖА</td>
+              <td>ПОКУПКА</td>
+              <td>ПРОДАЖА</td>
+              <td>ПОКУПКА</td>
+              <td>ПРОДАЖА</td>
+              <td>ПОКУПКА</td>
+              <td>ПРОДАЖА</td>
+              <td>ОБНОВЛЕНО</td>
+            </tr>
+          </thead>
+          <tbody>
+           {% for banks in banks.bank_сurrency %}
+            <tr>
+              <td><img src="{{ banks.bank_img_url }}" width="30px" height="30px"/></td>
+              <td>{{ banks.bank_name }}</td>
+              <td>{{ banks.buying_USD }}</td>
+              <td>{{ banks.sealing_USD }}</td>
+              <td>{{ banks.buying_EUR }}</td>
+              <td>{{ banks.sealing_EUR }}</td>
+              <td>{{ banks.buying_RUB }}</td>
+              <td>{{ banks.sealing_RUB }}</td>
+              <td>{{ banks.buying_KZT }}</td>
+              <td>{{ banks.sealing_KZT }}</td>
+              <td>{{ banks.refresh_date }}</td>
+          {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+
+
           {% for row in table %} {% if row.value == True %} {% else %}
           <div class="bank">
             <div class="bank__header">
