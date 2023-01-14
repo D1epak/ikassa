@@ -4,6 +4,7 @@ import json
 
 URL_TEMPLATE = "https://www.tazabek.kg/valuta/"
 r = requests.get(URL_TEMPLATE)
+print(r.status_code)
 
 
 soup = bs(r.text, "html.parser")
@@ -13,6 +14,7 @@ def parse():
     data = {}
     data['bank_сurrency'] = []
     banks_names = soup.find_all('tr', class_='sortable')
+    print(banks_names)
     for name in banks_names:
         if name.text == "Покупка" or name.text == "Продажа":
             pass
@@ -33,7 +35,8 @@ def parse():
                 find_next('td', class_="td-dotted text-center").div.text
             sealing_KZT = name.find_next('td', class_="td-dotted text-center").\
                 find_next('td', class_="td-dotted text-center").find_next('td', class_="text-center").text
-            refresh_date = name.find_next('td', class_="text-center td-datetime").span.text
+            refresh_date = name.find_next('td', class_="td-datetime").text
+            refresh_date = name.find_next('td', class_="td-datetime").span.text
             if len(refresh_date) > 8:
                 refresh_date = refresh_date[5:]
 
