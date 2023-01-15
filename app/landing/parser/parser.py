@@ -14,7 +14,6 @@ def parse():
     data = {}
     data['bank_сurrency'] = []
     banks_names = soup.find_all('tr', class_='sortable')
-    print(banks_names)
     for name in banks_names:
         if name.text == "Покупка" or name.text == "Продажа":
             pass
@@ -35,8 +34,8 @@ def parse():
                 find_next('td', class_="td-dotted text-center").div.text
             sealing_KZT = name.find_next('td', class_="td-dotted text-center").\
                 find_next('td', class_="td-dotted text-center").find_next('td', class_="text-center").text
-            refresh_date = name.find_next('td', class_="td-datetime").text
             refresh_date = name.find_next('td', class_="td-datetime").span.text
+            new_hour = int(refresh_date[:2])
             if len(refresh_date) > 8:
                 refresh_date = refresh_date[5:]
 
@@ -51,7 +50,7 @@ def parse():
                 "sealing_RUB": f"{sealing_RUB}",
                 "buying_KZT": f"{buying_KZT}",
                 "sealing_KZT": f"{sealing_KZT}",
-                "refresh_date": f"{refresh_date}"
+                "refresh_date": f"{new_hour-1}{refresh_date[2:]}"
             })
     return data
 
