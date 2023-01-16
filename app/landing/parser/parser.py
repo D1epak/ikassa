@@ -52,5 +52,5 @@ def parse():
                 "sealing_KZT": f"{sealing_KZT}",
                 "refresh_date": f"{new_hour-1}{refresh_date[2:]}"
             })
+    print("Выполняем скрипт по парсингу данных")
     return data
-

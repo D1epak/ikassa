@@ -14,6 +14,6 @@ class Landing(TemplateView):
         context = super().get_context_data(**kwargs)
         context['table'] = table
         context['tablef'] = table_first
-        context['banks'] = parse
+        context['banks'] = parse()
         context['seotags'] = seotags
         return context
